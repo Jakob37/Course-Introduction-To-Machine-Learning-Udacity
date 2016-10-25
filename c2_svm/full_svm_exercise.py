@@ -23,7 +23,7 @@ for c_value in param_c_values:
     clf.fit(features_train, labels_train)
     print("Training time: {}".format(time() - t0))
 
-    pred = clf.predict(features_test)
+    pred = clf.predict(features_test, labels_test)
 
     accuracy = sklearn.metrics.accuracy_score(labels_test, pred)
 
