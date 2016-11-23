@@ -34,6 +34,11 @@ plt.ylabel('net worths')
 plt.savefig('test.png')
 output_image('test.png', 'png', open('test.png', 'rb').read())
 
+print('Net worth: {}'.format(reg.predict(27)[0][0]))
+print('Slope: {}'.format(reg.coef_[0][0]))
+print('Intercept: {}'.format(reg.intercept_[0]))
+print('Test score: {}'.format(reg.score(ages_train, net_worths_train)))
+print('Train score: {}'.format(reg.score(ages_test, net_worths_test)))
 
 
 
